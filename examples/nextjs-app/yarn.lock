@@ -932,22 +932,22 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@react-keycloak/core@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@react-keycloak/core/-/core-2.0.0.tgz#5bd68c05d79cd37fb8a6ee63208b971285e0bc20"
-  integrity sha512-BMU7QX6ocnyIvEr0wD64yRBd8lnqEW+7FqeysdbmbITq5nVKh5LDMFnA4GsusMsBLYXpiq6Z2M8qhC9PYynL1A==
+"@react-keycloak/core@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@react-keycloak/core/-/core-2.1.1.tgz#b636ec2e50753f54ba2ee4cc1a3a702cb7da7ecd"
+  integrity sha512-uLGPeMDEz1Jj6EjHbFS+kvIsOIe48TaEpaD54tUjc4QxzMVQaX+4ZvecwyBcJKPGL9f9MkTlPWz/3brIBHJ2FA==
   dependencies:
     "@babel/runtime" "^7.9.0"
     prop-types "^15.7.2"
     react-fast-compare "^3.0.1"
 
-"@react-keycloak/nextjs@^2.0.0-beta.1":
-  version "2.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/@react-keycloak/nextjs/-/nextjs-2.0.0-beta.2.tgz#76102e86c0d6bc0dff9c28afe43447c56d85f702"
-  integrity sha512-VOEHSww/tDs88HJYgjEkIakfysiDkKZox1QkaqxxwGyBkVedl5QEYgFijgulq/Y/z3zPJV2AGglCehUq342fFg==
+"@react-keycloak/nextjs@^2.0.0-beta.6":
+  version "2.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@react-keycloak/nextjs/-/nextjs-2.0.0-beta.6.tgz#bd208ac449f07a17e106062d7218d70be489f053"
+  integrity sha512-DWAuwT/LhVKlVqe9lTdYwMrs+2urHCN1+K11XfriKfzAZbvde3vIMvPK3RtGD03MWF0OMq+yEhK9HZl/6CT6gQ==
   dependencies:
     "@babel/runtime" "^7.9.0"
-    "@react-keycloak/core" "^2.0.0"
+    "@react-keycloak/core" "^2.1.1"
     base-64 "^0.1.0"
     detect-node "^2.0.4"
     hoist-non-react-statics "^3.3.2"
@@ -2739,10 +2739,10 @@ json5@^2.1.0, json5@^2.1.2:
   dependencies:
     minimist "^1.2.5"
 
-keycloak-js@^9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-9.0.2.tgz#c8c9721b43b7401b9ac2384afc84a07e8e29095c"
-  integrity sha512-1QKNYw1+wHGrbjiK2zxJzG5krq4VBhsQazCQOe1958ODWIwoUo4wLu9wgkBPwMtkl3y3osQnVSeCpYdpBLtq+A==
+keycloak-js@^9.0.3:
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/keycloak-js/-/keycloak-js-9.0.3.tgz#cb63412df13c7c6390df5b902555866e659b24b4"
+  integrity sha512-c8FFPa8YiJmPbJEMZ/mIrHflBR6FIFUm5xTWtIDzlrnoeF4u0wDmTBfo1u71rWIL1HanLvg3T+9AgR1NqfmGbA==
   dependencies:
     base64-js "1.3.1"
     js-sha256 "0.9.0"
@@ -2820,9 +2820,9 @@ locate-path@^3.0.0:
     path-exists "^3.0.0"
 
 lodash@^4.17.11, lodash@^4.17.13:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
