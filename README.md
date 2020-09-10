@@ -6,11 +6,14 @@
 
 [![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak/core?label=npm%20%7C%20core)](https://www.npmjs.com/package/@react-keycloak/core)
 [![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak/web?label=npm%20%7C%20web)](https://www.npmjs.com/package/@react-keycloak/web)
-[![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak/nextjs?label=npm%20%7C%20nextjs)](https://www.npmjs.com/package/@react-keycloak/nextjs)
-[![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak/razzle?label=npm%20%7C%20razzle)](https://www.npmjs.com/package/@react-keycloak/razzle)
+[![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak/ssr?label=npm%20%7C%20ssr)](https://www.npmjs.com/package/@react-keycloak/ssr)
+[![NPM (scoped)](https://img.shields.io/npm/v/@react-keycloak/native?label=npm%20%7C%20native)](https://www.npmjs.com/package/@react-keycloak/native)
 
 [![License](https://img.shields.io/github/license/react-keycloak/react-keycloak-examples.svg)](https://github.com/react-keycloak/react-keycloak-examples/blob/master/LICENSE.md)
+[![GitHub contributors](https://img.shields.io/github/contributors/react-keycloak/react-keycloak-examples)](https://github.com/react-keycloak/react-keycloak-examples/graphs/contributors)
 [![Github Issues](https://img.shields.io/github/issues/react-keycloak/react-keycloak-examples.svg)](https://github.com/react-keycloak/react-keycloak-examples/issues)
+
+[![Gitter](https://img.shields.io/gitter/room/react-keycloak/community)](https://gitter.im/react-keycloak/community)
 
 ---
 
