@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { useCallback } from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { Redirect, useLocation } from 'react-router-dom';
 
 import { useKeycloak } from '@react-keycloak/web';
 
-const LoginPage = withRouter(({ location }) => {
+const LoginPage = () => {
+  const location = useLocation()
   const currentLocationState: { [key: string]: unknown } = location.state || {
     from: { pathname: '/home' },
   };
@@ -23,6 +24,6 @@ const LoginPage = withRouter(({ location }) => {
       </button>
     </div>
   );
-});
+};
 
 export default LoginPage;
