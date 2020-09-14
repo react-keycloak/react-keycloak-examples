@@ -45,6 +45,7 @@ server
         <meta charset="utf-8" />
         <title>Welcome to Razzle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>window.env = ${JSON.stringify(getKeycloakConfig())}</script>
         ${
           assets.client.css
             ? `<link rel="stylesheet" href="${assets.client.css}">`
