@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import * as React from 'react'
 import Head from 'next/head'
 
 import { Footer } from './Footer'
@@ -8,9 +8,9 @@ type Props = {
   title?: string
 }
 
-export const Layout: FC<Props> = ({
+export const Layout: React.FC<Props> = ({
   children,
-  title = 'Next.js + Keycloak Example'
+  title = 'Next.js + Keycloak Example',
 }) => (
   <div>
     <Head>
