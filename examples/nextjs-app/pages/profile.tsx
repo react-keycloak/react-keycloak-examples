@@ -1,19 +1,22 @@
-import * as React from 'react'
+import { useKeycloak } from '@react-keycloak/ssr'
+import type { KeycloakInstance, KeycloakTokenParsed } from 'keycloak-js'
 import type { NextPage } from 'next'
-import { KeycloakTokenParsed } from 'keycloak-js'
-
-import { withKeycloak } from '@react-keycloak/nextjs'
+import * as React from 'react'
 
 import { Layout } from '../components/Layout'
 
 type ParsedToken = KeycloakTokenParsed & {
   email?: string
+
   preferred_username?: string
+
   given_name?: string
+
   family_name?: string
 }
 
-const ProfilePage: NextPage = withKeycloak(({ keycloak }) => {
+const ProfilePage: NextPage = () => {
+  const { keycloak } = useKeycloak<KeycloakInstance>()
   const parsedToken: ParsedToken | undefined = keycloak?.tokenParsed
 
   const profile = keycloak?.authenticated ? (
@@ -47,6 +50,6 @@ const ProfilePage: NextPage = withKeycloak(({ keycloak }) => {
       {profile}
     </Layout>
   )
-})
+}
 
 export default ProfilePage
