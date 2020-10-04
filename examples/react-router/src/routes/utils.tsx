@@ -1,20 +1,21 @@
-import * as React from 'react';
-import { Route, Redirect, RouteComponentProps } from 'react-router-dom';
-import type { RouteProps } from 'react-router-dom';
+import * as React from 'react'
+import { Route, Redirect, RouteComponentProps } from 'react-router-dom'
+import type { RouteProps } from 'react-router-dom'
 
-import { useKeycloak } from '@react-keycloak/web';
+import { useKeycloak } from '@react-keycloak/web'
+import type { KeycloakInstance } from 'keycloak-js'
 
 interface PrivateRouteParams extends RouteProps {
   component:
     | React.ComponentType<RouteComponentProps<any>>
-    | React.ComponentType<any>;
+    | React.ComponentType<any>
 }
 
 export function PrivateRoute({
   component: Component,
   ...rest
 }: PrivateRouteParams) {
-  const { keycloak } = useKeycloak();
+  const { keycloak } = useKeycloak<KeycloakInstance>()
 
   return (
     <Route
@@ -32,5 +33,5 @@ export function PrivateRoute({
         )
       }
     />
-  );
+  )
 }
