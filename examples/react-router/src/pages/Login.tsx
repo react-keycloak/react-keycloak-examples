@@ -1,21 +1,27 @@
+
 import * as React from 'react';
 import { useCallback } from 'react';
 import { Redirect, useLocation } from 'react-router-dom';
 
-import { useKeycloak } from '@react-keycloak/web';
+
+import { useKeycloak } from '@react-keycloak/web'
+import type { KeycloakInstance } from 'keycloak-js'
+
 
 const LoginPage = () => {
   const location = useLocation();
   const currentLocationState: { [key: string]: unknown } = location.state || {
     from: { pathname: '/home' },
-  };
-  const { keycloak } = useKeycloak();
+  }
+
+  const { keycloak } = useKeycloak<KeycloakInstance>()
+
   const login = useCallback(() => {
-    keycloak?.login();
-  }, [keycloak]);
+    keycloak?.login()
+  }, [keycloak])
 
   if (keycloak?.authenticated)
-    return <Redirect to={currentLocationState?.from as string} />;
+    return <Redirect to={currentLocationSte?.from as string} />
 
   return (
     <div>
@@ -23,7 +29,8 @@ const LoginPage = () => {
         Login
       </button>
     </div>
+
   );
 };
 
-export default LoginPage;
+export default LoginPage

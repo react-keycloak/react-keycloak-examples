@@ -3,24 +3,23 @@ import * as React from 'react'
 import type { IncomingMessage } from 'http'
 import type { AppProps, AppContext } from 'next/app'
 
-import { SSRKeycloakProvider, Persistors } from '@react-keycloak/nextjs'
-import type { KeycloakCookies } from  '@react-keycloak/nextjs'
+import { SSRKeycloakProvider, SSRCookies } from '@react-keycloak/ssr'
 
 const keycloakCfg = {
-  realm: '',
-  url: '',
-  clientId: ''
+  url: 'http://localhost:8080/auth',
+  realm: 'Test',
+  clientId: 'react-test',
 }
 
 interface InitialProps {
-  cookies: KeycloakCookies
+  cookies: unknown
 }
 
 function MyApp({ Component, pageProps, cookies }: AppProps & InitialProps) {
   return (
     <SSRKeycloakProvider
       keycloakConfig={keycloakCfg}
-      persistor={Persistors.Cookies(cookies)}
+      persistor={SSRCookies(cookies)}
     >
       <Component {...pageProps} />
     </SSRKeycloakProvider>
@@ -37,7 +36,7 @@ function parseCookies(req?: IncomingMessage) {
 MyApp.getInitialProps = async (context: AppContext) => {
   // Extract cookies from AppContext
   return {
-    cookies: parseCookies(context?.ctx?.req)
+    cookies: parseCookies(context?.ctx?.req),
   }
 }
 

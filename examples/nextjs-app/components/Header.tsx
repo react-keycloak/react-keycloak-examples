@@ -1,9 +1,11 @@
-import React from 'react'
+import { useKeycloak } from '@react-keycloak/ssr'
+import type { KeycloakInstance } from 'keycloak-js'
 import Link from 'next/link'
+import * as React from 'react'
 
-import { withKeycloak } from '@react-keycloak/nextjs'
+export const Header: React.FC = () => {
+  const { keycloak } = useKeycloak<KeycloakInstance>()
 
-export const Header = withKeycloak(({ keycloak }) => {
   return (
     <header className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
       <Link href="/">
@@ -16,7 +18,7 @@ export const Header = withKeycloak(({ keycloak }) => {
           <a className="p-2 text-dark">Profile</a>
         </Link>
       </nav>
-      {keycloak.authenticated ? (
+      {keycloak?.authenticated ? (
         <>
           <button
             type="button"
@@ -71,4 +73,4 @@ export const Header = withKeycloak(({ keycloak }) => {
       )}
     </header>
   )
-})
+}
