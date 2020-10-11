@@ -8,7 +8,7 @@ import type { KeycloakInstance } from 'keycloak-js'
 
 
 const LoginPage = () => {
-  const location = useLocation();
+  const location = useLocation()
   const currentLocationState: { [key: string]: unknown } = location.state || {
     from: { pathname: '/home' },
   }
